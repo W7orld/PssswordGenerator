@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:layoutDirection="rtl"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/lowercase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/lowercase" />
+
+            <CheckBox
+                android:id="@+id/uppercase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/uppercase" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/specialCharacters"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/symbols" />
+
+            <CheckBox
+                android:id="@+id/digits"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/numbers" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/length"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:id="@+id/pwd_length"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:maxLength="3"
+                android:layout_marginRight="7dp"
+                android:layout_marginLeft="7dp"
+                android:layout_gravity="center_vertical"
+                android:inputType="number"
+                android:gravity="center"
+                android:importantForAutofill="no" />
+
+            <stream.custombutton.CustomButton
+                android:id="@+id/lengthCounter_plusBtn"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="@string/plus_symbol"
+                android:textSize="20sp"
+                android:onClick="lengthCounter_plusBtn"
+                app:btn_cornerRadius="180dp"
+                app:btn_strokeWidth="0dp"
+                app:btn_buttonColor="@color/colorPrimary"
+                app:btn_textColor="@android:color/white"/>
+
+            <stream.custombutton.CustomButton
+                android:id="@+id/lengthCounter_minusBtn"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:text="@string/minus_symbol"
+                android:textSize="26sp"
+                android:onClick="lengthCounter_minusBtn"
+                app:btn_cornerRadius="180dp"
+                app:btn_strokeWidth="0dp"
+                app:btn_buttonColor="@color/colorPrimary"
+                app:btn_textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+        <stream.custombutton.CustomButton
+            android:id="@+id/btnGeneratePwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/generate"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:onClick="btnGeneratePwd"
+            app:btn_cornerRadius="20dp"
+            app:btn_strokeWidth="1dp"
+            app:btn_strokeColor="@color/colorPrimary"
+            app:btn_buttonColor="@color/colorPrimary"
+            app:btn_textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/pwdGenerated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="7dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_margin="4dp"/>
+
+        <View
+            android:id="@+id/pwdStrength"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"/>
+
+        <TextView
+            android:id="@+id/pwdStrengthStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+        <stream.custombutton.CustomButton
+            android:id="@+id/btnCopyPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:text="@string/copy"
+            android:onClick="btnCopyPwd"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:ellipsize="none"
+            app:btn_cornerRadius="20dp"
+            app:btn_strokeWidth="1dp"
+            app:btn_strokeColor="@color/colorPrimary"
+            app:btn_buttonColor="@color/colorPrimary"
+            app:btn_textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</ScrollView>

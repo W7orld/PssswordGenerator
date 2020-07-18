@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">أداة إنشاء كلمات السر</string>
+    <string name="lowercase">أحرف صغيرة</string>
+    <string name="uppercase">أحرف كبيرة</string>
+    <string name="symbols"> رموز</string>
+    <string name="numbers">أرقام</string>
+    <string name="length">الطول</string>
+    <string name="generate">انشاء</string>
+    <string name="copy">نسخ</string>
+    <string name="minus_symbol">-</string>
+    <string name="plus_symbol">+</string>
+    <string name="weak">ضعيف</string>
+    <string name="not_strong">ليس قوي</string>
+    <string name="strong"> قوي</string>
+    <string name="short_password_msg">كلمة السر قصيرة جدا!! يجب ان تتكون من 4 أحرف على الأقل</string>
+    <string name="about">حول</string>
+    <string name="close">إغلاق</string>
+    <string name="copied_to_clipboard">تم النسخ إلى الحافظة</string>
+    <string name="medium">متوسط</string>
+    <string name="very_strong">قوي جدا</string>
+</resources>
